@@ -41,7 +41,7 @@ resource "aws_route_table" "prod-route-table" {
 
 resource "aws_subnet" "subnet-1" {
     vpc_id = aws_vpc.prod-vpc.id
-    cidr_block = "10.0.1.0/24"
+    cidr_block = var.subnet_prefix
     availability_zone = "us-east-1a"
 
     tags = {
